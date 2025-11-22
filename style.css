@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(242, 242, 242);;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #0a0a0a;
+  font-family: 'Helvetica';
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.card {
+  width: 23rem;
+  background-color: rgba(255, 255, 255, 0.102);
+  border-radius: 1rem;
+  position: relative;
+  padding: .5rem;
+  /* overflow: hidden; */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  position: relative;
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  border-radius: 1rem;
+}
+
+.details {
+  backdrop-filter: blur(4px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  margin: .5rem;
+  /* text-align: center; */
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: .25rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 200;
+  margin-top: .5rem;
+  line-height: 1.25rem;
+  letter-spacing: .5px;
+}
