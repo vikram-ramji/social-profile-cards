@@ -1,5 +1,3 @@
-const main = document.querySelector("main");
-
 const users = [
   {
     id: 1,
@@ -39,6 +37,8 @@ const users = [
   },
 ];
 
+const main = document.querySelector("main");
+
 users.forEach(function ({ fullName, image, profession, description }) {
   main.innerHTML += `<div class="card">
       <div class="image">
@@ -48,9 +48,26 @@ users.forEach(function ({ fullName, image, profession, description }) {
         <div class="overlay"></div>
       </div>
       <div class="details">
-        <h3>${fullName}</h3>
+        <div>
+          <h3>${fullName}</h3>
+          <button><i class="ri-user-add-line"></i></button>
+        </div>
         <h4>${profession}</h4>
         <p>${description}</p>
       </div>
     </div>`;
+});
+
+main.addEventListener("click", function (e) {
+  const btn = e.target.closest("button");
+  const name = btn?.parentElement.querySelector("h3");
+  console.log(name);
+  btn?.classList.toggle("added");
+  if (!btn?.classList.contains("added")) {
+    btn.innerHTML = `<i class="ri-user-add-line"></i>`;
+    name.innerHTML = name.innerHTML.replace(`<i class="ri-check-line"></i>`, "");
+  } else {
+    btn.innerHTML = `<i class="ri-user-unfollow-line"></i>`;
+    name.innerHTML += `<i class="ri-check-line"></i>`;
+  }
 });

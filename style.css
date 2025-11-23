@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: rgb(242, 242, 242);;
+  color: rgb(242, 242, 242);
 }
 
 html,
@@ -15,7 +15,7 @@ main {
   height: 100%;
   width: 100%;
   background-color: #0a0a0a;
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   padding: 2rem;
   display: flex;
   align-items: flex-start;
@@ -30,9 +30,9 @@ main {
   background-color: rgba(255, 255, 255, 0.102);
   border-radius: 1rem;
   position: relative;
-  padding: .5rem;
+  padding: 0.5rem;
   /* overflow: hidden; */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .image {
@@ -56,7 +56,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   border-radius: 1rem;
 }
 
@@ -67,14 +67,36 @@ img {
   left: 0;
   border-radius: 1rem;
   padding: 1.5rem 1.25rem;
-  margin: .5rem;
+  margin: 0.5rem;
   /* text-align: center; */
+}
+
+.details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h3 {
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
+}
+
+button {
+  background: none;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
 }
 
 h4 {
@@ -86,7 +108,7 @@ h4 {
 p {
   font-size: 1rem;
   font-weight: 200;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   line-height: 1.25rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
